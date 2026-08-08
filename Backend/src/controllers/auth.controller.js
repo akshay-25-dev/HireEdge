@@ -6,11 +6,13 @@ const tokenBlacklistModel = require("../models/blacklist.model")
 /* Shared cookie options.
    httpOnly -> JS in the browser (incl. any injected/XSS script) cannot read the cookie.
    secure   -> only sent over HTTPS in production.
-   sameSite -> "lax" gives baseline CSRF protection while still allowing normal navigation. */
+   sameSite -> "none" is required when frontend & backend are on different domains (cross-site).
+              In development (same origin) "lax" is fine. */
+const isProduction = process.env.NODE_ENV === "production"
 const authCookieOptions = {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
+    secure: isProduction,
+    sameSite: isProduction ? "none" : "lax",
     maxAge: 24 * 60 * 60 * 1000 // 1 day, matches the JWT expiry below
 }
 
