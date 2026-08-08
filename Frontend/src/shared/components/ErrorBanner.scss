@@ -1,0 +1,16 @@
+.error-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 0.9rem;
+    background-color: rgba(255, 77, 77, 0.1);
+    border: 1px solid rgba(255, 77, 77, 0.3);
+    border-radius: 0.6rem;
+    color: #ff8080;
+    font-size: 0.825rem;
+    line-height: 1.4;
+
+    svg {
+        flex-shrink: 0;
+    }
+}

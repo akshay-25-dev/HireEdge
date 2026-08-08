@@ -1,0 +1,68 @@
+.app-navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        text-decoration: none;
+    }
+
+    &__mark {
+        width: 28px;
+        height: 28px;
+        border-radius: 0.5rem;
+        background: linear-gradient(135deg, #ff2d78 0%, #c4045f 100%);
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__name {
+        color: #e6edf3;
+        font-weight: 700;
+        font-size: 0.95rem;
+        letter-spacing: -0.01em;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__user {
+        font-size: 0.825rem;
+        color: #7d8590;
+    }
+
+    &__logout {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: transparent;
+        border: 1px solid #2a3348;
+        color: #e6edf3;
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 0.45rem 0.85rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+
+        &:hover {
+            border-color: #ff2d78;
+            color: #ff2d78;
+            background-color: rgba(255, 45, 120, 0.08);
+        }
+    }
+}
