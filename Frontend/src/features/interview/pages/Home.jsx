@@ -207,6 +207,7 @@ const Home = () => {
 
             {/* Page Footer */}
             <footer className='page-footer'>
+                <span className='page-footer__credit'>Made with ❤️ by Akshay</span>
                 <a href='#'>Privacy Policy</a>
                 <a href='#'>Terms of Service</a>
                 <a href='#'>Help Center</a>
